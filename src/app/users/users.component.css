@@ -1,0 +1,13 @@
+h1 {
+  background-color: #00a3e0;
+  color: #ffffff;
+}
+.table thead th {
+  color: #00a3e0;
+}
+.userImage {
+  width: 35px;
+  height: 35px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

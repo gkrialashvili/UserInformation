@@ -1,0 +1,62 @@
+<div class="card">
+  <h1 class="card-header">
+    {{ pageTitle }}
+  </h1>
+  <div class="card-body">
+    <div class="d-flex align-items-center">
+      <div class="mr-2">Filter by:</div>
+      <div class="">
+        <input
+          [(ngModel)]="listFilter"
+          type="text"
+          class="form-control"
+          placeholder="Search"
+        />
+      </div>
+    </div>
+    <div class="table-responsive mt-5">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Client Number</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Sex</th>
+            <th>Country</th>
+            <th>City</th>
+            <th>Address</th>
+            <th>Photo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let userList of filteredUsers">
+            <td>{{ userList.ClientNumber }}</td>
+            <td>{{ userList.FirstName }}</td>
+            <td>{{ userList.LastName }}</td>
+            <td>{{ userList.Sex }}</td>
+            <td>{{ userList.Country | uppercase }}</td>
+            <td>{{ userList.City }}</td>
+            <td>{{ userList.Address }}</td>
+            <td>
+              <div
+                class="userImage male"
+                *ngIf="userList.Sex === 'Male'"
+                [ngStyle]="{
+                  'background-image': 'url(' + maleImage + ')'
+                }"
+              ></div>
+              <div
+                class="userImage male"
+                *ngIf="userList.Sex === 'Female'"
+                [ngStyle]="{
+                  'background-image': 'url(' + femaleImage + ')'
+                }"
+              ></div>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<div class="alert alert-danger"></div>
