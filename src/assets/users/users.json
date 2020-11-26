@@ -1,0 +1,38 @@
+[
+  {
+    "ClientNumber": 2,
+    "FirstName": "George",
+    "LastName": "Krialashvili",
+    "Sex": "Male",
+    "Country": "Georgia",
+    "City": "Tbilisi",
+    "Address": "Kalistrate Kut Street"
+  },
+  {
+    "ClientNumber": 12,
+    "FirstName": "Lasha",
+    "LastName": "Krialashvili",
+    "Sex": "Male",
+    "Country": "Georgia",
+    "City": "Tbilisi",
+    "Address": "Digomi"
+  },
+  {
+    "ClientNumber": 16,
+    "FirstName": "Sesili",
+    "LastName": "Krialashvili",
+    "Sex": "Female",
+    "Country": "Georgia",
+    "City": "Tbilisi",
+    "Address": "Digomi"
+  },
+  {
+    "ClientNumber": 25,
+    "FirstName": "Nini",
+    "LastName": "Mestiashvili",
+    "Sex": "Female",
+    "Country": "Georgia",
+    "City": "Tbilisi",
+    "Address": "Shanghai"
+  }
+]

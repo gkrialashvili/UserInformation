@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UserServices } from './users.service';
 
 @Component({
   selector: 'app-users',
@@ -9,7 +10,9 @@ export class UsersComponent implements OnInit {
   pageTitle = 'Users Information';
   maleImage = './assets/images/man.svg';
   femaleImage = './assets/images/female.svg';
-  _listFiler: string;
+  erroMessage: string;
+  lastSeachValue: any;
+  _listFiler: any;
   get listFilter() {
     return this._listFiler;
   }
@@ -21,39 +24,9 @@ export class UsersComponent implements OnInit {
   }
 
   filteredUsers = [];
-  userLists = [
-    {
-      ClientNumber: 2,
-      FirstName: 'George',
-      LastName: 'Krialashvili',
-      Sex: 'Male',
-      Country: 'Georgia',
-      City: 'Tbilisi',
-      Address: 'Kalistrate Kut Street',
-    },
-    {
-      ClientNumber: 12,
-      FirstName: 'Lasha',
-      LastName: 'Krialashvili',
-      Sex: 'Male',
-      Country: 'Georgia',
-      City: 'Tbilisi',
-      Address: 'Digomi',
-    },
-    {
-      ClientNumber: 16,
-      FirstName: 'Sesili',
-      LastName: 'Krialashvili',
-      Sex: 'Female',
-      Country: 'Georgia',
-      City: 'Tbilisi',
-      Address: 'Digomi',
-    },
-  ];
+  userLists = [];
 
-  constructor() {
-    this.filteredUsers = this.userLists;
-  }
+  constructor(private userServices: UserServices) {}
 
   performFilter(filterBy) {
     filterBy = filterBy.toLocaleLowerCase();
@@ -69,7 +42,30 @@ export class UsersComponent implements OnInit {
     );
   }
 
+  userClick(event: string) {
+    alert(event);
+  }
+  filter() {}
+  saveLastSearch(event) {
+    let inputValue = event.target.value;
+    localStorage.setItem('lastSeach', inputValue);
+  }
+  getLastSearch() {
+    localStorage.getItem('lastSeach');
+    this.lastSeachValue = localStorage.getItem('lastSeach');
+  }
+
   ngOnInit() {
-    console.log('init working');
+    this.userServices.getUsers().subscribe({
+      next: (users) => {
+        this.userLists = users;
+        this.filteredUsers = this.userLists;
+      },
+      complete: () => {
+        this.getLastSearch();
+        this.listFilter = this.lastSeachValue;
+      },
+      error: (err) => (this.erroMessage = err),
+    });
   }
 }

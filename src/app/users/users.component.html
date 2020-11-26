@@ -11,6 +11,7 @@
           type="text"
           class="form-control"
           placeholder="Search"
+          (keyup)="saveLastSearch($event)"
         />
       </div>
     </div>
@@ -18,6 +19,7 @@
       <table class="table">
         <thead>
           <tr>
+            <th>Photo</th>
             <th>Client Number</th>
             <th>First Name</th>
             <th>Last Name</th>
@@ -25,18 +27,11 @@
             <th>Country</th>
             <th>City</th>
             <th>Address</th>
-            <th>Photo</th>
+            <th></th>
           </tr>
         </thead>
         <tbody>
-          <tr *ngFor="let userList of filteredUsers">
-            <td>{{ userList.ClientNumber }}</td>
-            <td>{{ userList.FirstName }}</td>
-            <td>{{ userList.LastName }}</td>
-            <td>{{ userList.Sex }}</td>
-            <td>{{ userList.Country | uppercase }}</td>
-            <td>{{ userList.City }}</td>
-            <td>{{ userList.Address }}</td>
+          <tr class="tableRow" *ngFor="let userList of filteredUsers">
             <td>
               <div
                 class="userImage male"
@@ -53,10 +48,26 @@
                 }"
               ></div>
             </td>
+            <td>{{ userList.ClientNumber }}</td>
+            <td>{{ userList.FirstName }}</td>
+            <td>{{ userList.LastName }}</td>
+            <td>{{ userList.Sex }}</td>
+            <td>{{ userList.Country | uppercase }}</td>
+            <td>{{ userList.City }}</td>
+            <td>{{ userList.Address }}</td>
+            <td>
+              <button
+                id="{{ userList.ClientNumber }}"
+                type="button"
+                class="btn btn-outline-info"
+                (click)="userClick($event.target.id)"
+              >
+                Details
+              </button>
+            </td>
           </tr>
         </tbody>
       </table>
     </div>
   </div>
 </div>
-<div class="alert alert-danger"></div>
