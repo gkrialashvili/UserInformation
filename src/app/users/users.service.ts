@@ -2,7 +2,7 @@ import { HttpClient, HttpErrorResponse } from '@angular/common/http';
 import { from, Observable, observable, throwError } from 'rxjs';
 import { Injectable } from '@angular/core';
 import { IUsers } from './users';
-import { catchError, tap } from 'rxjs/operators';
+import { catchError, map, tap } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -15,6 +15,13 @@ export class UserServices {
     return this.http
       .get<any[]>(this.usersUrl)
       .pipe(catchError(this.handleError));
+  }
+
+  public getUser(id): Observable<any | undefined> {
+    return this.getUsers().pipe(
+      map((users: any[]) => users.find((p) => p.ClientNumber === id)),
+      catchError(this.handleError)
+    );
   }
 
   private handleError(err: HttpErrorResponse): Observable<never> {

@@ -1,1 +1,8 @@
-<app-users></app-users>
+<div class="card container-fluid">
+  <h1 class="card-header">
+    <a class="homeLogo" [routerLink]="['/users']">{{ pageTitle }}</a>
+  </h1>
+</div>
+<div class="users-container" class="container-fluid">
+  <router-outlet></router-outlet>
+</div>

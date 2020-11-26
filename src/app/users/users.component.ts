@@ -2,7 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { UserServices } from './users.service';
 
 @Component({
-  selector: 'app-users',
   templateUrl: './users.component.html',
   styleUrls: ['./users.component.css'],
 })
@@ -42,10 +41,8 @@ export class UsersComponent implements OnInit {
     );
   }
 
-  userClick(event: string) {
-    alert(event);
-  }
-  filter() {}
+  userClick(event: string) {}
+
   saveLastSearch(event) {
     let inputValue = event.target.value;
     localStorage.setItem('lastSeach', inputValue);

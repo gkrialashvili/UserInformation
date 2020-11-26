@@ -6,7 +6,7 @@
     "Sex": "Male",
     "Country": "Georgia",
     "City": "Tbilisi",
-    "imageUrl": "url",
+    "imageUrl": "./assets/images/MichaelScott.png",
     "Address": "74 Merab Kostava St, Tbilisi 0171",
     "Accounts": [
       {
@@ -36,7 +36,7 @@
     "Sex": "Male",
     "Country": "USA",
     "City": "California",
-    "imageUrl": "url",
+    "imageUrl": "./assets/images/DwightSchrute.jpg",
     "Address": "27a Nadira Khosharauli Street, Tbilisi 0119",
     "Accounts": [
       {
@@ -66,7 +66,7 @@
     "Sex": "Male",
     "Country": "USA",
     "City": "Pensilvania",
-    "imageUrl": "url",
+    "imageUrl": "./assets/images/Jim.png",
     "Address": "7 Ilia Chavchavadze Avenue, Tbilisi 0179",
     "Accounts": [
       {
@@ -96,7 +96,7 @@
     "Sex": "Female",
     "Country": "GERMANY",
     "City": "Berlin",
-    "imageUrl": "url",
+    "imageUrl": "./assets/images/PamBeesly.jpg",
     "Address": "Merab Kostava St, Tbilisi",
     "Accounts": [
       {
@@ -126,7 +126,7 @@
     "Sex": "Female",
     "Country": "ENGLAND",
     "City": "London",
-    "imageUrl": "url",
+    "imageUrl": "./assets/images/angela.png",
     "Address": "The University of Georgia, IV, 77a Merab Kostava St, Tbilisi 0171",
     "Accounts": [
       {
@@ -156,7 +156,7 @@
     "Sex": "Male",
     "Country": "Georgia",
     "City": "Tbilisi",
-    "imageUrl": "url",
+    "imageUrl": "./assets/images/Kevin.jpg",
     "Address": "Archil Kereselidze steet",
     "Accounts": [
       {
@@ -180,13 +180,43 @@
     ]
   },
   {
+    "ClientNumber": 78,
+    "FirstName": "Creed",
+    "LastName": "Barton",
+    "Sex": "Male",
+    "Country": "Iceland",
+    "City": "Hafnarfjordur",
+    "imageUrl": "./assets/images/creed.jpg",
+    "Address": "22RF+WM Hafnarfjordur",
+    "Accounts": [
+      {
+        "AccountsNumber": 353848195775845,
+        "AccountType": "მიმდინარე",
+        "Currency": "GEL",
+        "AccountStatus": "Active"
+      },
+      {
+        "AccountsNumber": 353848195775845,
+        "AccountType": "მიმდინარე",
+        "Currency": "USD",
+        "AccountStatus": "Active"
+      },
+      {
+        "AccountsNumber": 850434796358027,
+        "AccountType": "შემნახველი",
+        "Currency": "GEL",
+        "AccountStatus": "Closed"
+      }
+    ]
+  },
+  {
     "ClientNumber": 35,
-    "FirstName": "Holly",
-    "LastName": "Flax",
+    "FirstName": "Meredith",
+    "LastName": "Palmer",
     "Sex": "Female",
     "Country": "Georgia",
     "City": "Tbilisi",
-    "imageUrl": "url",
+    "imageUrl": "./assets/images/meredith.jpg",
     "Address": "David Kipiani St, Tbilisi",
     "Accounts": [
       {

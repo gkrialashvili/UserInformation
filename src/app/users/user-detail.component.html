@@ -1,0 +1,47 @@
+<div class="card">
+  <div class="card-header">
+    <div class="card-body">
+      <div class="row">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-4">Name:</div>
+            <div class="col-md-8">
+              {{ user.FirstName + " " + user.LastName }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">Sex:</div>
+            <div class="col-md-8">
+              {{ user.Sex }}
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">Country:</div>
+            <div class="col-md-8">{{ user.Country + " " + user.City }}</div>
+          </div>
+          <div class="row">
+            <div class="col-md-4">Address:</div>
+            <div class="col-md-8">{{ user.Address }}</div>
+          </div>
+        </div>
+
+        <div class="col-md-4">
+          <img
+            class="center-block img-responsive"
+            [style.width.px]="200"
+            [style.margin.px]="2"
+            [src]="user.imageUrl"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="backButtonContainer">
+      <input
+        type="button"
+        class="btn btn-outline-warning backButton"
+        (click)="goBack()"
+        value="Back"
+      />
+    </div>
+  </div>
+</div>

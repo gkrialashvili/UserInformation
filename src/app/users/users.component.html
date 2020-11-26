@@ -1,7 +1,4 @@
 <div class="card">
-  <h1 class="card-header">
-    {{ pageTitle }}
-  </h1>
   <div class="card-body">
     <div class="d-flex align-items-center">
       <div class="mr-2">Filter by:</div>
@@ -56,14 +53,14 @@
             <td>{{ userList.City }}</td>
             <td>{{ userList.Address }}</td>
             <td>
-              <button
+              <a
                 id="{{ userList.ClientNumber }}"
-                type="button"
                 class="btn btn-outline-info"
                 (click)="userClick($event.target.id)"
+                [routerLink]="['/users', userList.ClientNumber]"
               >
                 Details
-              </button>
+              </a>
             </td>
           </tr>
         </tbody>

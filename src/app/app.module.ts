@@ -6,10 +6,22 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users/users.component';
+import { UserDetailComponent } from './users/user-detail.component';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule],
+  declarations: [AppComponent, UsersComponent, UserDetailComponent],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    RouterModule.forRoot([
+      { path: 'users', component: UsersComponent },
+      { path: '', redirectTo: 'users', pathMatch: 'full' },
+      { path: 'users/:id', component: UserDetailComponent },
+    ]),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

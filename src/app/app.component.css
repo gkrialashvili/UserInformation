@@ -1,4 +1,24 @@
-h1 {
-  color: salmon;
+.card {
+  height: 100px;
+  padding: 0 !important;
+  background-color: #00a3e0;
+  color: #ffffff;
+  border: none !important;
+  margin: 0 !important;
+  justify-content: center;
 }
-/*# sourceMappingURL=app.component.css.map */
+.card .card-header {
+  background-color: transparent !important;
+  border: none;
+}
+.homeLogo {
+  cursor: pointer;
+  color: #ffffff;
+}
+.homeLogo:hover {
+  font-weight: bold;
+  text-decoration: none;
+}
+.users-container {
+  padding: 0;
+}
