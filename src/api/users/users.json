@@ -127,7 +127,7 @@
     "Country": "ENGLAND",
     "City": "London",
     "imageUrl": "./assets/images/angela.png",
-    "Address": "The University of Georgia, IV, 77a Merab Kostava St, Tbilisi 0171",
+    "Address": "77a Merab Kostava St",
     "Accounts": [
       {
         "AccountsNumber": 353848195775845,
@@ -139,6 +139,18 @@
         "AccountsNumber": 353848195775845,
         "AccountType": "მიმდინარე",
         "Currency": "USD",
+        "AccountStatus": "Active"
+      },
+      {
+        "AccountsNumber": 353848195775845,
+        "AccountType": "დაგროვებით",
+        "Currency": "USD",
+        "AccountStatus": "Active"
+      },
+      {
+        "AccountsNumber": 353848195775845,
+        "AccountType": "დაგროვებით",
+        "Currency": "GEL",
         "AccountStatus": "Active"
       },
       {
@@ -166,14 +178,8 @@
         "AccountStatus": "Active"
       },
       {
-        "AccountsNumber": 353848195775845,
-        "AccountType": "მიმდინარე",
-        "Currency": "USD",
-        "AccountStatus": "Active"
-      },
-      {
         "AccountsNumber": 850434796358027,
-        "AccountType": "შემნახველი",
+        "AccountType": "დაგროვებით",
         "Currency": "GEL",
         "AccountStatus": "Closed"
       }
@@ -197,7 +203,7 @@
       },
       {
         "AccountsNumber": 353848195775845,
-        "AccountType": "მიმდინარე",
+        "AccountType": "დაგროვებით",
         "Currency": "USD",
         "AccountStatus": "Active"
       },
